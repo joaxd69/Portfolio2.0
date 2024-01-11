@@ -1,0 +1,28 @@
+---
+interface Props {
+  title?: string;
+}
+import "@fontsource/ubuntu-mono";
+import Nav from "../components/Nav/Nav.astro";
+import { ViewTransitions } from "astro:transitions";
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Joa dev {`${title ? "| " + title : ""}`}</title>
+    <ViewTransitions />
+  </head>
+  <body class="flex flex-col gap-2 bg-primary">
+    <Nav />
+    <main class="flex flex-col w-full items-center">
+      <slot />
+    </main>
+  </body>
+</html>

@@ -1,0 +1,16 @@
+---
+interface Props {
+  pathname: string;
+  text: string;
+  href: string;
+}
+const { text, pathname, href } = Astro.props;
+---
+
+<a
+  href={href}
+  class:list={[
+    " hover:bg-secondary p-1 px-4 rounded-xl",
+    { "bg-secondary ": pathname == href },
+  ]}>{text}</a
+>
