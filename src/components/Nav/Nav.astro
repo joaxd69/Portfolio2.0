@@ -5,7 +5,7 @@ const { pathname } = Astro.url;
 ---
 
 <nav
-  class="flex justify-between items-center text-tertiary border-b border-tertiary px-8">
+  class="flex justify-between items-center text-tertiary  shadow  px-8 fixed w-full backdrop-blur">
   <section>
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -21,7 +21,7 @@ const { pathname } = Astro.url;
     >
   </section>
   <section class="flex gap-8 text-2xl p-2 font-bold font-ubuntuMono">
-    <Links pathname={pathname} text="Home" href="/" />
+    <Links pathname={pathname} text="Inicio" href="/" />
     <Links pathname={pathname} text="Sobre mi" href="/about-me" />
     <Links pathname={pathname} text="Proyectos" href="/projects" />
     <Links pathname={pathname} text="Contacto" href="/contact" />
